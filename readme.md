@@ -1,0 +1,1 @@
+This is the base for basic SDL I/O, file reading, and memory management in a C++ game.

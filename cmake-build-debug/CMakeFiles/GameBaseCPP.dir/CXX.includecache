@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/model/Block.h
+
+../include/model/GameObject.h
+
+/Users/russelltemplet/Workstation/GameBaseCPP/src/main.cpp
+iostream
+-
+vector
+-
+model/GameObject.h
+-
+model/Block.h
+-
+
+/Users/russelltemplet/Workstation/GameBaseCPP/src/model/Block.cpp
+model/GameObject.h
+-
+model/Block.h
+-
+
+/Users/russelltemplet/Workstation/GameBaseCPP/src/model/GameObject.cpp
+model/GameObject.h
+/Users/russelltemplet/Workstation/GameBaseCPP/src/model/model/GameObject.h
+
