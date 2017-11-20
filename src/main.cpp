@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
 
-#include <model/GameObject.h>
-#include <model/Block.h>
+#include <model/entity/GameObject.h>
+#include <model/entity/Block.h>
 
 int main() {
     std::vector<std::unique_ptr<GameObject>> gameVec;
