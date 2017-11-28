@@ -12,15 +12,11 @@ private:
     char* readFile();
 
 public:
-    DataGridBuilder(std::string _fileName, int _dataGridWidth, int _dataGridHeight);
+    DataGridBuilder(const std::string &_fileName, int _dataGridWidth, int _dataGridHeight);
 
-    const std::string &getFileName() const {
-        return fileName;
-    }
+    const std::string &getFileName() const;
 
-    const DataGrid &getDataGrid() const {
-        return dataGrid;
-    }
+    const DataGrid &getDataGrid() const;
 
     void build();
 };

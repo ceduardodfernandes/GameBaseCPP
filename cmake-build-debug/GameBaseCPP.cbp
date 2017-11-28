@@ -84,19 +84,61 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/include/model/Block.h">
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/include/model/entity/Block.h">
 			<Option target="GameBaseCPP"/>
 		</Unit>
-		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/include/model/GameObject.h">
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/include/model/entity/GameObject.h">
+			<Option target="GameBaseCPP"/>
+		</Unit>
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/include/model/entity/test/Dog.h">
+			<Option target="GameBaseCPP"/>
+		</Unit>
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/include/model/entity/test/Milk.h">
+			<Option target="GameBaseCPP"/>
+		</Unit>
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/include/model/entity/test/Person.h">
+			<Option target="GameBaseCPP"/>
+		</Unit>
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/include/util/data/DataGrid.h">
+			<Option target="GameBaseCPP"/>
+		</Unit>
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/include/util/data/DataGridBuilder.h">
+			<Option target="GameBaseCPP"/>
+		</Unit>
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/include/util/data/ObjectGridBuilder.h">
 			<Option target="GameBaseCPP"/>
 		</Unit>
 		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/src/main.cpp">
 			<Option target="GameBaseCPP"/>
 		</Unit>
-		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/src/model/Block.cpp">
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/src/model/entity/Block.cpp">
 			<Option target="GameBaseCPP"/>
 		</Unit>
-		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/src/model/GameObject.cpp">
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/src/model/entity/GameObject.cpp">
+			<Option target="GameBaseCPP"/>
+		</Unit>
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/src/model/entity/test/Dog.cpp">
+			<Option target="GameBaseCPP"/>
+		</Unit>
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/src/model/entity/test/Milk.cpp">
+			<Option target="GameBaseCPP"/>
+		</Unit>
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/src/model/entity/test/Person.cpp">
+			<Option target="GameBaseCPP"/>
+		</Unit>
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/src/tests/test_data_read.cpp">
+			<Option target="GameBaseCPP"/>
+		</Unit>
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/src/tests/test_write_data_example.cpp">
+			<Option target="GameBaseCPP"/>
+		</Unit>
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/src/util/data/DataGrid.cpp">
+			<Option target="GameBaseCPP"/>
+		</Unit>
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/src/util/data/DataGridBuilder.cpp">
+			<Option target="GameBaseCPP"/>
+		</Unit>
+		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/src/util/data/ObjectGridBuilder.cpp">
 			<Option target="GameBaseCPP"/>
 		</Unit>
 		<Unit filename="/Users/russelltemplet/Workstation/GameBaseCPP/CMakeLists.txt">

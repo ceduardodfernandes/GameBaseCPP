@@ -1,7 +1,6 @@
 #include <model/entity/GameObject.h>
 #include <memory>
 #include <vector>
-#include <array>
 #include "DataGrid.h"
 
 using AreaBlock = std::vector<std::unique_ptr<GameObject>>;
@@ -16,14 +15,13 @@ private:
     int objectGridHeight;
     int playerPositionIndex;
 
-    std::array objectGrid;
+    std::vector<AreaBlock> objectGrid;
 
     AreaBlock (*constructAreaBlock)(int dataIndex);
 
 public:
     ObjectGridBuilder(const DataGrid &_dataGrid, int _edgeBufferWidth, int _edgeBufferHeight, AreaBlock (*_constructAreaBlock)(int));
     ObjectGridBuilder(const DataGrid &_dataGrid, int _edgeBufferWidth, int _edgeBufferHeight, AreaBlock (*_constructAreaBlock)(int), int _playerPositionIndex);
-    ~ObjectGridBuilder();
 
     int getEdgeBufferWidth() const {
         return edgeBufferWidth;
@@ -45,7 +43,7 @@ public:
         return playerPositionIndex;
     }
 
-    const std::array &getObjectGrid() const {
+    const std::vector<AreaBlock> &getObjectGrid() const {
         return objectGrid;
     }
 
