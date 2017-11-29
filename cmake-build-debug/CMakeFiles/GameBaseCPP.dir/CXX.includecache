@@ -6,25 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../include/model/entity/Block.h
-
 ../include/model/entity/GameObject.h
-
-../include/model/entity/test/Dog.h
-string
--
-model/entity/GameObject.h
-../include/model/entity/test/model/entity/GameObject.h
-
-../include/model/entity/test/Milk.h
-model/entity/GameObject.h
-../include/model/entity/test/model/entity/GameObject.h
-
-../include/model/entity/test/Person.h
-model/entity/GameObject.h
-../include/model/entity/test/model/entity/GameObject.h
-string
--
 
 ../include/util/data/DataGrid.h
 
@@ -40,16 +22,6 @@ model/entity/GameObject.h
 util/data/DataGrid.h
 -
 
-../include/util/data/ObjectGridBuilder.h
-model/entity/GameObject.h
--
-memory
--
-vector
--
-DataGrid.h
-../include/util/data/DataGrid.h
-
 /Users/russelltemplet/Workstation/GameBaseCPP/src/main.cpp
 iostream
 -
@@ -58,47 +30,15 @@ tests/test_data_read.cpp
 tests/test_write_data_example.cpp
 /Users/russelltemplet/Workstation/GameBaseCPP/src/tests/test_write_data_example.cpp
 
-/Users/russelltemplet/Workstation/GameBaseCPP/src/model/entity/Block.cpp
-model/entity/GameObject.h
--
-model/entity/Block.h
--
-
-/Users/russelltemplet/Workstation/GameBaseCPP/src/model/entity/GameObject.cpp
-model/entity/GameObject.h
-/Users/russelltemplet/Workstation/GameBaseCPP/src/model/entity/model/entity/GameObject.h
-
-/Users/russelltemplet/Workstation/GameBaseCPP/src/model/entity/test/Dog.cpp
-model/entity/test/Dog.h
-/Users/russelltemplet/Workstation/GameBaseCPP/src/model/entity/test/model/entity/test/Dog.h
-
-/Users/russelltemplet/Workstation/GameBaseCPP/src/model/entity/test/Milk.cpp
-model/entity/test/Milk.h
-/Users/russelltemplet/Workstation/GameBaseCPP/src/model/entity/test/model/entity/test/Milk.h
-
-/Users/russelltemplet/Workstation/GameBaseCPP/src/model/entity/test/Person.cpp
-model/entity/test/Person.h
-/Users/russelltemplet/Workstation/GameBaseCPP/src/model/entity/test/model/entity/test/Person.h
-
 /Users/russelltemplet/Workstation/GameBaseCPP/src/tests/test_data_read.cpp
 iostream
 -
+util/data/DataGridBuilder.h
+/Users/russelltemplet/Workstation/GameBaseCPP/src/tests/util/data/DataGridBuilder.h
 
 /Users/russelltemplet/Workstation/GameBaseCPP/src/tests/test_write_data_example.cpp
 iostream
 -
 fstream
 -
-
-/Users/russelltemplet/Workstation/GameBaseCPP/src/util/data/DataGrid.cpp
-util/data/DataGrid.h
--
-
-/Users/russelltemplet/Workstation/GameBaseCPP/src/util/data/DataGridBuilder.cpp
-util/data/DataGridBuilder.h
--
-
-/Users/russelltemplet/Workstation/GameBaseCPP/src/util/data/ObjectGridBuilder.cpp
-util/data/ObjectGridBuilder.h
-/Users/russelltemplet/Workstation/GameBaseCPP/src/util/data/util/data/ObjectGridBuilder.h
 
