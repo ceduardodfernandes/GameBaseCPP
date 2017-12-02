@@ -1,8 +1,8 @@
 #include <string>
 #include <fstream>
 #include <vector>
-#include <model/entity/GameObject.h>
-#include <util/data/DataGrid.h>
+#include "model/entity/GameObject.h"
+#include "util/data/DataGrid.h"
 
 class DataGridBuilder {
 private:

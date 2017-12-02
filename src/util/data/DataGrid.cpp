@@ -2,7 +2,7 @@
 // Created by Russell Templet on 11/20/17.
 //
 
-#include <util/data/DataGrid.h>
+#include "util/data/DataGrid.h"
 
 DataGrid::DataGrid(int _gridWidth, int _gridHeight) :
         gridWidth(_gridWidth), gridHeight(_gridHeight) { }

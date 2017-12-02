@@ -2,7 +2,7 @@
 // Created by Russell Templet on 11/19/17.
 //
 
-#include <util/data/DataGridBuilder.h>
+#include "util/data/DataGridBuilder.h"
 
 DataGridBuilder::DataGridBuilder(const std::string &_fileName, int _dataGridWidth, int _dataGridHeight) :
         dataGrid(_dataGridWidth, _dataGridHeight), fileName(_fileName) { }

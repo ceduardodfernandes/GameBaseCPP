@@ -1,7 +1,7 @@
-#include <model/entity/GameObject.h>
 #include <memory>
 #include <vector>
 #include "DataGrid.h"
+#include "model/entity/GameObject.h"
 
 using AreaBlock = std::vector<std::unique_ptr<GameObject>>;
 

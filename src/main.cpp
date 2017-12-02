@@ -1,9 +1,9 @@
 #include <iostream>
-#include "tests/test_data_read.cpp"
-#include "tests/test_write_data_example.cpp"
+#include "tests/test_data_read.h"
+#include "tests/test_write_data_example.h"
 
 /**
- * This Fmain file is the main controller of the engine -- decides whether to run game, editor, or any custom tests.
+ * This main file is the main controller of the engine -- decides whether to run game, editor, or any custom tests.
  * Feel free to add more custom cases if more tests/modes are desired
  *
  * @param argc
@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
         } else if (std::strcmp(argv[1], "-2") == 0) {
 
             // run test_data_read.cpp
-            return test_data_write_example::run();
+            return test_write_data_example::run();
 
         }
     } else {

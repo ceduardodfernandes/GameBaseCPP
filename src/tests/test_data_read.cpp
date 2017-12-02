@@ -2,10 +2,15 @@
 // Created by Russell Templet on 11/26/17.
 //
 
-#include <iostream>
-#include "util/data/DataGridBuilder.h"
+#include "tests/test_data_read.h"
 
 namespace test_data_read {
+
+    AreaBlock constructAreaBlock(int um) {
+            //... put something proper here
+            return AreaBlock();
+    }
+
     int run() {
 
         std::cout << "Used test data read version!\n";
@@ -13,6 +18,9 @@ namespace test_data_read {
         DataGridBuilder dataGridBuilder("test_out.txt", 5, 5);
         dataGridBuilder.build();
         DataGrid grid = dataGridBuilder.getDataGrid();
+            ObjectGridBuilder objectGridBuilder(grid, 1, 1, constructAreaBlock);
+
+
 
         std::cout << "got it!\n";
 
