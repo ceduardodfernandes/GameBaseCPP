@@ -1,3 +1,6 @@
+#ifndef DATAGRIDBUILDER_H
+#define DATAGRIDBUILDER_H
+
 #include <string>
 #include <fstream>
 #include <vector>
@@ -20,3 +23,5 @@ public:
 
     void build();
 };
+
+#endif /* DATAGRIDBUILDER_H */

@@ -1,3 +1,6 @@
+#ifndef PERSON_H
+#define PERSON_H
+
 #include "model/entity/GameObject.h"
 #include <string>
 
@@ -13,3 +16,5 @@ public:
     int getAddress() const;
 
 };
+
+#endif /* PERSON_H */

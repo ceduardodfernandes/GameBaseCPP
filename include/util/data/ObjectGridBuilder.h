@@ -1,51 +1,26 @@
+#ifndef OBJECTGRIDBUILDER_H
+#define OBJECTGRIDBUILDER_H
+
 #include <memory>
 #include <vector>
 #include "DataGrid.h"
-#include "model/entity/GameObject.h"
-
-using AreaBlock = std::vector<std::unique_ptr<GameObject>>;
+#include "util/data/ObjectGrid.h"
 
 class ObjectGridBuilder {
 private:
     const DataGrid dataGrid;
+    ObjectGrid objectGrid;
 
-    int edgeBufferWidth;    //num AreaBlocks on EACH SIDE of the center block - horizontally
-    int edgeBufferHeight;   //num AreaBlocks on EACH SIDE of the center block - vertically
-    int objectGridWidth;
-    int objectGridHeight;
-    int playerPositionIndex;
-
-    std::vector<AreaBlock> objectGrid;
-
-    AreaBlock (*constructAreaBlock)(int dataIndex);
+    AreaBlock (*constructAreaBlock)(const DataGrid &dataGrid, int dataIndex);
 
 public:
-    ObjectGridBuilder(const DataGrid &_dataGrid, int _edgeBufferWidth, int _edgeBufferHeight, AreaBlock (*_constructAreaBlock)(int));
-    ObjectGridBuilder(const DataGrid &_dataGrid, int _edgeBufferWidth, int _edgeBufferHeight, AreaBlock (*_constructAreaBlock)(int), int _playerPositionIndex);
+    ObjectGridBuilder(const DataGrid &_dataGrid, int _edgeBufferWidth, int _edgeBufferHeight, AreaBlock (*_constructAreaBlock)(const DataGrid&,int), int _playerPositionIndex);
 
-    int getEdgeBufferWidth() const {
-        return edgeBufferWidth;
-    }
+    const DataGrid &getDataGrid() const;
 
-    int getEdgeBufferHeight() const {
-        return edgeBufferHeight;
-    }
-
-    int getObjectGridWidth() const {
-        return objectGridWidth;
-    }
-
-    int getObjectGridHeight() const {
-        return objectGridHeight;
-    }
-
-    int getPlayerPositionIndex() const {
-        return playerPositionIndex;
-    }
-
-    const std::vector<AreaBlock> &getObjectGrid() const {
-        return objectGrid;
-    }
+    const ObjectGrid &getObjectGrid() const;
 
     void build();
 };
+
+#endif /* OBJECTGRIDBUILDER_H */

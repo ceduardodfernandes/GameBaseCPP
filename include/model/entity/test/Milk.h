@@ -1,3 +1,6 @@
+#ifndef MILK_H
+#define MILK_H
+
 #include "model/entity/GameObject.h"
 
 class Milk : public GameObject {
@@ -11,3 +14,5 @@ public:
 
     int getType() const;
 };
+
+#endif /* MILK_H */

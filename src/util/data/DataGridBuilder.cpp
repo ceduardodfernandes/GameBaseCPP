@@ -26,14 +26,15 @@ void DataGridBuilder::build() {
     char delimiter[] = "|";
     char* areaStr = strtok(memBlock, delimiter);
 
+    int i = 0;
     while (areaStr != nullptr) {
-        if (dataGrid.appendData(areaStr)) {
+        if (dataGrid.addData(areaStr, i)) {
             areaStr = strtok(nullptr, delimiter);   //somehow this takes the next area chunk...
         } else {
             break;
         }
+        i++;
     }
-    dataGrid.resetIndex();
     delete[] memBlock;
 }
 

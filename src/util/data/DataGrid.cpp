@@ -5,22 +5,20 @@
 #include "util/data/DataGrid.h"
 
 DataGrid::DataGrid(int _gridWidth, int _gridHeight) :
-        gridWidth(_gridWidth), gridHeight(_gridHeight) { }
+        gridWidth(_gridWidth), gridHeight(_gridHeight) {
+    dataArray = new char* [gridWidth * gridHeight];
+}
 
 DataGrid::~DataGrid() {
     delete[] dataArray;
 }
 
-bool DataGrid::appendData(char *data) {
+//returns true only if index is within bounds of grid
+bool DataGrid::addData(char *data, int index) {
     bool result = false;
-    if (currentIndex < gridWidth * gridHeight) {
-        dataArray[currentIndex] = data;
-        currentIndex++;
+    if (index < gridWidth * gridHeight) {
+        dataArray[index] = data;
         result = true;
     }
     return result;
-}
-
-void DataGrid::resetIndex() {
-    currentIndex = 0;
 }

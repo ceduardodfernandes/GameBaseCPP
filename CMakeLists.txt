@@ -12,10 +12,9 @@ set(HEADER_FILES
         include/model/entity/Block.h
         include/model/entity/GameObject.h
         include/util/data/DataGrid.h
+        include/util/data/ObjectGrid.h
         include/util/data/DataGridBuilder.h
         include/util/data/ObjectGridBuilder.h
-        include/tests/test_data_read.h
-        include/tests/test_write_data_example.h
         )
 
 set(SOURCE_FILES
@@ -25,6 +24,7 @@ set(SOURCE_FILES
         src/model/entity/Block.cpp
         src/model/entity/GameObject.cpp
         src/util/data/DataGrid.cpp
+        src/util/data/ObjectGrid.cpp
         src/util/data/DataGridBuilder.cpp
         src/util/data/ObjectGridBuilder.cpp
         src/main.cpp

@@ -4,33 +4,38 @@
 
 #include "util/data/ObjectGridBuilder.h"
 
-using AreaBlock = std::vector<std::unique_ptr<GameObject>>;
-
-ObjectGridBuilder::ObjectGridBuilder(const DataGrid &_dataGrid, int _edgeBufferWidth, int _edgeBufferHeight, AreaBlock (*_constructAreaBlock)(int), int _playerPositionIndex = 0) :
-        dataGrid(_dataGrid), edgeBufferWidth(_edgeBufferWidth), edgeBufferHeight(_edgeBufferHeight), constructAreaBlock(_constructAreaBlock), playerPositionIndex(_playerPositionIndex) {
-    objectGridWidth = 2 * edgeBufferWidth + 1;
-    objectGridHeight = 2 * edgeBufferHeight + 1;
-}
+ObjectGridBuilder::ObjectGridBuilder(const DataGrid &_dataGrid, int _edgeBufferWidth, int _edgeBufferHeight, AreaBlock (*_constructAreaBlock)(const DataGrid&,int), int _playerPositionIndex = 0) :
+        dataGrid(_dataGrid), objectGrid(_edgeBufferWidth, _edgeBufferHeight, _playerPositionIndex), constructAreaBlock(_constructAreaBlock) {}
 
 void ObjectGridBuilder::build() {
+    int coarseIndex, index, column;
+
     int dataGridWidth = dataGrid.getGridWidth();
     int dataGridHeight = dataGrid.getGridHeight();
+    int bufferWidth = objectGrid.getEdgeBufferWidth();
+    int bufferHeight = objectGrid.getEdgeBufferHeight();
+    int playerPosition = objectGrid.getPlayerPositionIndex();
 
-    int startI = playerPositionIndex - (dataGridWidth * edgeBufferHeight);
-    int startJ = playerPositionIndex - edgeBufferWidth;
-
-    int endI = playerPositionIndex + (dataGridWidth * edgeBufferHeight);
-    int endJ = playerPositionIndex + edgeBufferWidth;
-
-    for (int i = startI; i < endI; i += dataGridWidth) {
-        if (i >= 0 && i < dataGridHeight) {
-            for (int j = startJ; j < endJ; j++) {
-                if (j >= 0 && j < dataGridWidth) {
-
+    for (int i = -1 * bufferHeight; i <= bufferHeight; i++) {
+        coarseIndex = playerPosition + (i * dataGridWidth);
+        if (coarseIndex >= 0 && coarseIndex < dataGridWidth * dataGridHeight) {
+            column = coarseIndex % dataGridWidth;
+            for (int j = -1 * bufferWidth; j <= bufferWidth; j++) {
+                if (column + j >= 0 && column + j < dataGridWidth) {
+                    index = coarseIndex + j;
+                    objectGrid.push(constructAreaBlock(dataGrid, index));
                 }
             }
         }
     }
+}
+
+const DataGrid &ObjectGridBuilder::getDataGrid() const {
+    return dataGrid;
+}
+
+const ObjectGrid &ObjectGridBuilder::getObjectGrid() const {
+    return objectGrid;
 }
 
 

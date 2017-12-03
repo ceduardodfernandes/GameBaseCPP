@@ -1,3 +1,6 @@
+#ifndef GAMEOBJECT_H
+#define GAMEOBJECT_H
+
 class GameObject {
 protected:
     int instanceId, classId, x, y;
@@ -27,3 +30,5 @@ public:
 
     virtual void update() =0;
 };
+
+#endif /* GAMEOBJECT_H */

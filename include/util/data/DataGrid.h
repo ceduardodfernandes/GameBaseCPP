@@ -1,9 +1,11 @@
+#ifndef DATAGRID_H
+#define DATAGRID_H
+
 class DataGrid {
 private:
     char** dataArray;
     int gridWidth;
     int gridHeight;
-    int currentIndex;
 
 public:
     DataGrid(int _gridWidth, int _gridHeight);
@@ -21,12 +23,7 @@ public:
         return gridHeight;
     }
 
-
-    int getCurrentIndex() const {
-        return currentIndex;
-    }
-
-    bool appendData(char* data);
-
-    void resetIndex();
+    bool addData(char *data, int index);
 };
+
+#endif /* DATAGRID_H */

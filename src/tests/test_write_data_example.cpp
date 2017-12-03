@@ -2,7 +2,8 @@
 // Created by Russell Templet on 11/26/17.
 //
 
-#include "tests/test_write_data_example.h"
+#include <iostream>
+#include <fstream>
 
 namespace test_write_data_example {
 

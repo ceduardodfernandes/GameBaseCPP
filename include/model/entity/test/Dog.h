@@ -1,3 +1,6 @@
+#ifndef DOG_H
+#define DOG_H
+
 #include <string>
 #include "model/entity/GameObject.h"
 
@@ -13,3 +16,5 @@ public:
 
     int getDogYears() const;
 };
+
+#endif /* DOG_H */
