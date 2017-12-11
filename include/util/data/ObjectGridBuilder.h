@@ -11,10 +11,10 @@ private:
     const DataGrid dataGrid;
     ObjectGrid objectGrid;
 
-    AreaBlock (*constructAreaBlock)(const DataGrid &dataGrid, int dataIndex);
+    AreaBlock (*constructAreaBlock)(const char* blockData);
 
 public:
-    ObjectGridBuilder(const DataGrid &_dataGrid, int _edgeBufferWidth, int _edgeBufferHeight, AreaBlock (*_constructAreaBlock)(const DataGrid&,int), int _playerPositionIndex);
+    ObjectGridBuilder(const DataGrid &_dataGrid, int _edgeBufferWidth, int _edgeBufferHeight, AreaBlock (*_constructAreaBlock)(const char*), int _playerPositionIndex);
 
     const DataGrid &getDataGrid() const;
 

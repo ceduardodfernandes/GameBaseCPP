@@ -4,7 +4,7 @@
 
 #include "util/data/ObjectGridBuilder.h"
 
-ObjectGridBuilder::ObjectGridBuilder(const DataGrid &_dataGrid, int _edgeBufferWidth, int _edgeBufferHeight, AreaBlock (*_constructAreaBlock)(const DataGrid&,int), int _playerPositionIndex = 0) :
+ObjectGridBuilder::ObjectGridBuilder(const DataGrid &_dataGrid, int _edgeBufferWidth, int _edgeBufferHeight, AreaBlock (*_constructAreaBlock)(const char*), int _playerPositionIndex = 0) :
         dataGrid(_dataGrid), objectGrid(_edgeBufferWidth, _edgeBufferHeight, _playerPositionIndex), constructAreaBlock(_constructAreaBlock) {}
 
 void ObjectGridBuilder::build() {

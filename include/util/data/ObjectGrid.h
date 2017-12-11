@@ -9,7 +9,7 @@
 #include <vector>
 #include "model/entity/GameObject.h"
 
-using AreaBlock = std::vector<std::shared_ptr<GameObject>>;
+using AreaBlock = std::vector<std::unique_ptr<GameObject>>;
 
 class ObjectGrid {
 private:

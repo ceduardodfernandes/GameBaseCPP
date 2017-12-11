@@ -9,9 +9,29 @@
 
 namespace test_data_read {
 
-    AreaBlock constructAreaBlock(const DataGrid &dataGrid, int index) {
-            //... put something proper here
-            return AreaBlock();
+    //TODO: this code might be reusible, so maybe we can put it in it's own class or something
+    //TODO: convert this to take in std::string, NOT char*
+    AreaBlock constructAreaBlock(const char* blockData) {
+        char* tempData;
+        strcpy(blockData, tempData);
+
+        char* objStr = strtok(tempData, ",");
+
+        int i = 0;
+        while (areaStr != nullptr) {
+            if (dataGrid.addData(areaStr, i)) {
+                areaStr = strtok(nullptr, delimiter);   //somehow this takes the next area chunk...
+            } else {
+                break;
+            }
+            i++;
+        }
+        delete[] memBlock;
+
+        AreaBlock areaBlock;
+
+
+        return AreaBlock();
     }
 
     int run() {

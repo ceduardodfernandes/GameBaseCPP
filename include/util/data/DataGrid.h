@@ -1,9 +1,11 @@
 #ifndef DATAGRID_H
 #define DATAGRID_H
 
+#include <string>
+
 class DataGrid {
 private:
-    char** dataArray;
+    std::string* dataArray;
     int gridWidth;
     int gridHeight;
 
@@ -11,19 +13,13 @@ public:
     DataGrid(int _gridWidth, int _gridHeight);
     ~DataGrid();
 
-    char **getDataArray() const {
-        return dataArray;
-    }
+    std::string *getDataArray() const;
 
-    int getGridWidth() const {
-        return gridWidth;
-    }
+    int getGridWidth() const;
 
-    int getGridHeight() const {
-        return gridHeight;
-    }
+    int getGridHeight() const;
 
-    bool addData(char *data, int index);
+    bool addData(const std::string& data, int index);
 };
 
 #endif /* DATAGRID_H */
