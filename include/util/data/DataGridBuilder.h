@@ -7,6 +7,8 @@
 #include "model/entity/GameObject.h"
 #include "util/data/DataGrid.h"
 
+using DataGrid = std::vector<std::string>
+
 class DataGridBuilder {
 private:
     std::string fileName;
