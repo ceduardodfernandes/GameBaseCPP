@@ -3,22 +3,35 @@
 
 #include <memory>
 #include <vector>
+#include <model/entity/GameObject.h>
 #include "DataGrid.h"
-#include "util/data/ObjectGrid.h"
+#include "util/data/Grid.h"
+
+using AreaBlock = std::vector<std::unique_ptr<GameObject>>;
 
 class ObjectGridBuilder {
 private:
-    const DataGrid dataGrid;
-    ObjectGrid objectGrid;
+    const Grid<std::string>* dataGridPtr;
+    Grid<AreaBlock> objectGrid;
+    AreaBlock (*constructAreaBlock)(const std::string& blockData);
 
-    AreaBlock (*constructAreaBlock)(const char* blockData);
+    int bufferWidth;
+    int bufferHeight;
+
+    int playerPositionX;
+    int playerPositionY;
+
 
 public:
-    ObjectGridBuilder(const DataGrid &_dataGrid, int _edgeBufferWidth, int _edgeBufferHeight, AreaBlock (*_constructAreaBlock)(const char*), int _playerPositionIndex);
+    ObjectGridBuilder(const Grid<std::string> *_dataGridPtr, int _bufferWidth, int _bufferHeight, int _playerPositionX, int _playerPositionY, AreaBlock (*_constructAreaBlock)(const std::string&));
 
     const DataGrid &getDataGrid() const;
 
-    const ObjectGrid &getObjectGrid() const;
+    const Grid<AreaBlock> &getObjectGrid() const;
+
+    int getPlayerPositionX() const;
+
+    int getPlayerPositionY() const;
 
     void build();
 };

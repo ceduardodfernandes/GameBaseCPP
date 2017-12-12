@@ -4,17 +4,14 @@
 
 #include "util/data/ObjectGridBuilder.h"
 
-ObjectGridBuilder::ObjectGridBuilder(const DataGrid &_dataGrid, int _edgeBufferWidth, int _edgeBufferHeight, AreaBlock (*_constructAreaBlock)(const char*), int _playerPositionIndex = 0) :
-        dataGrid(_dataGrid), objectGrid(_edgeBufferWidth, _edgeBufferHeight, _playerPositionIndex), constructAreaBlock(_constructAreaBlock) {}
+ObjectGridBuilder::ObjectGridBuilder(const Grid<std::string> &_dataGrid, int _bufferWidth, int _bufferHeight, int _playerPositionX, int _playerPositionY, ObjectGrid::AreaBlock (*_constructAreaBlock)(const std::string &)) :
+
 
 void ObjectGridBuilder::build() {
     int coarseIndex, index, column;
 
     int dataGridWidth = dataGrid.getGridWidth();
     int dataGridHeight = dataGrid.getGridHeight();
-    int bufferWidth = objectGrid.getEdgeBufferWidth();
-    int bufferHeight = objectGrid.getEdgeBufferHeight();
-    int playerPosition = objectGrid.getPlayerPositionIndex();
 
     for (int i = -1 * bufferHeight; i <= bufferHeight; i++) {
         coarseIndex = playerPosition + (i * dataGridWidth);
@@ -23,7 +20,7 @@ void ObjectGridBuilder::build() {
             for (int j = -1 * bufferWidth; j <= bufferWidth; j++) {
                 if (column + j >= 0 && column + j < dataGridWidth) {
                     index = coarseIndex + j;
-                    objectGrid.push(constructAreaBlock(dataGrid, index));
+                    objectGrid.push(constructAreaBlock(dataGrid.));
                 }
             }
         }
@@ -36,6 +33,14 @@ const DataGrid &ObjectGridBuilder::getDataGrid() const {
 
 const ObjectGrid &ObjectGridBuilder::getObjectGrid() const {
     return objectGrid;
+}
+
+int ObjectGridBuilder::getPlayerPositionX() const {
+    return playerPositionX;
+}
+
+int ObjectGridBuilder::getPlayerPositionY() const {
+    return playerPositionY;
 }
 
 

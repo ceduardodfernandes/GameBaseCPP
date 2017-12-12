@@ -4,20 +4,20 @@
 #include <string>
 #include <fstream>
 #include <vector>
-#include "model/entity/GameObject.h"
-#include "util/data/DataGrid.h"
+#include "DataGrid.h"
+#include "Grid.h"
 
-using DataGrid = std::vector<std::string>
 
 class DataGridBuilder {
 private:
     std::string fileName;
-    DataGrid dataGrid;
+    char* delimiter;
+    Grid<std::string> dataGrid;
 
     char* readFile();
 
 public:
-    DataGridBuilder(const std::string &_fileName, int _dataGridWidth, int _dataGridHeight);
+    DataGridBuilder(std::string _fileName, int _dataGridWidth, int _dataGridHeight, char* _delimiter="|");
 
     const std::string &getFileName() const;
 

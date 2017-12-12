@@ -9,20 +9,18 @@
 #include <vector>
 #include "model/entity/GameObject.h"
 
-using AreaBlock = std::vector<std::unique_ptr<GameObject>>;
-
 class ObjectGrid {
 private:
-    int edgeBufferWidth;    //num AreaBlocks on EACH SIDE of the center block - horizontally
-    int edgeBufferHeight;   //num AreaBlocks on EACH SIDE of the center block - vertically
     int width;
     int height;
-    int playerPositionIndex;
 
     std::vector<AreaBlock> grid;
 
 public:
-    ObjectGrid(int _edgeBufferWidth, int _edgeBufferHeight, int _playerPositionIndex);
+    template <class T>
+    using AreaBlock = std::vector<std::unique_ptr<T>>;
+
+    ObjectGrid(int _width, int _height);
 
     void push(const AreaBlock &block);
 
@@ -33,8 +31,6 @@ public:
     int getWidth() const;
 
     int getHeight() const;
-
-    int getPlayerPositionIndex() const;
 
     const std::vector<AreaBlock> &getGrid() const;
 };

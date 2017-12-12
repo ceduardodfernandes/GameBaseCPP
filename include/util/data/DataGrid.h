@@ -2,24 +2,28 @@
 #define DATAGRID_H
 
 #include <string>
+#include <vector>
 
 class DataGrid {
 private:
-    std::string* dataArray;
+    std::vector<std::string> data;
     int gridWidth;
     int gridHeight;
 
 public:
     DataGrid(int _gridWidth, int _gridHeight);
-    ~DataGrid();
 
-    std::string *getDataArray() const;
+    const std::vector<std::string> &getData() const;
+
+    const std::string& operator[] (int index) const;
+
+    const std::string& operator[] (int index_i, int index_j) const;
 
     int getGridWidth() const;
 
     int getGridHeight() const;
 
-    bool addData(const std::string& data, int index);
+    void addData(const char* value);
 };
 
 #endif /* DATAGRID_H */

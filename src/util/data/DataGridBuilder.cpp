@@ -4,8 +4,8 @@
 
 #include "util/data/DataGridBuilder.h"
 
-DataGridBuilder::DataGridBuilder(const std::string &_fileName, int _dataGridWidth, int _dataGridHeight) :
-        dataGrid(_dataGridWidth, _dataGridHeight), fileName(_fileName) { }
+DataGridBuilder::DataGridBuilder(std::string _fileName, int _dataGridWidth, int _dataGridHeight, char* _delimiter) :
+        dataGrid(_dataGridWidth, _dataGridHeight), fileName(std::move(_fileName)), delimiter(_delimiter) { }
 
 char* DataGridBuilder::readFile() {
     char* memBlock = nullptr;
@@ -23,17 +23,11 @@ char* DataGridBuilder::readFile() {
 
 void DataGridBuilder::build() {
     char* memBlock = readFile();
-    char delimiter[] = "|";
     char* areaStr = strtok(memBlock, delimiter);
 
-    int i = 0;
     while (areaStr != nullptr) {
-        if (dataGrid.addData(areaStr, i)) {
-            areaStr = strtok(nullptr, delimiter);   //somehow this takes the next area chunk...
-        } else {
-            break;
-        }
-        i++;
+        dataGrid.appendDataRV(std::string(areaStr));
+        areaStr = strtok(nullptr, delimiter);   //somehow this takes the next area chunk...
     }
     delete[] memBlock;
 }

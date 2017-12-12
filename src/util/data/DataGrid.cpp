@@ -5,26 +5,11 @@
 #include "util/data/DataGrid.h"
 
 DataGrid::DataGrid(int _gridWidth, int _gridHeight) :
-        gridWidth(_gridWidth), gridHeight(_gridHeight) {
-    dataArray = new char* [gridWidth * gridHeight];
-}
+        gridWidth(_gridWidth), gridHeight(_gridHeight) {}
 
-DataGrid::~DataGrid() {
-    delete[] dataArray;
-}
-
-//returns true only if index is within bounds of grid
-bool DataGrid::addData(const std::string &data, int index) {
-    bool result = false;
-    if (index < gridWidth * gridHeight) {
-        dataArray[index] = data;
-        result = true;
-    }
-    return result;
-}
-
-std::string *DataGrid::getDataArray() const {
-    return dataArray;
+//makes a copy of a potentially large string...
+void DataGrid::addData(const char* value) {
+    data.emplace_back(std::string(value));
 }
 
 int DataGrid::getGridWidth() const {
@@ -33,4 +18,17 @@ int DataGrid::getGridWidth() const {
 
 int DataGrid::getGridHeight() const {
     return gridHeight;
+}
+
+const std::vector<std::string> &DataGrid::getData() const {
+    return data;
+}
+
+const std::string& DataGrid::operator[] (int index) const {
+    return data[index];
+}
+
+const std::string& DataGrid::operator[] (int index_i, int index_j) const {
+    int index = (index_i * gridWidth) + index_j;
+    return data[index];
 }

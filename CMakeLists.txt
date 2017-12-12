@@ -11,11 +11,11 @@ set(HEADER_FILES
         include/model/entity/test/Person.h
         include/model/entity/Block.h
         include/model/entity/GameObject.h
+        include/util/data/Grid.h
         include/util/data/DataGrid.h
         include/util/data/ObjectGrid.h
         include/util/data/DataGridBuilder.h
-        include/util/data/ObjectGridBuilder.h
-        )
+        include/util/data/ObjectGridBuilder.h)
 
 set(SOURCE_FILES
         src/model/entity/test/Dog.cpp
@@ -23,6 +23,7 @@ set(SOURCE_FILES
         src/model/entity/test/Person.cpp
         src/model/entity/Block.cpp
         src/model/entity/GameObject.cpp
+        src/util/data/Grid.cpp
         src/util/data/DataGrid.cpp
         src/util/data/ObjectGrid.cpp
         src/util/data/DataGridBuilder.cpp
