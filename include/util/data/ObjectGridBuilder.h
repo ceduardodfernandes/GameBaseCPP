@@ -3,8 +3,7 @@
 
 #include <memory>
 #include <vector>
-#include <model/entity/GameObject.h>
-#include "DataGrid.h"
+#include "model/entity/GameObject.h"
 #include "util/data/Grid.h"
 
 using AreaBlock = std::vector<std::unique_ptr<GameObject>>;
@@ -24,8 +23,6 @@ private:
 
 public:
     ObjectGridBuilder(const Grid<std::string> *_dataGridPtr, int _bufferWidth, int _bufferHeight, int _playerPositionX, int _playerPositionY, AreaBlock (*_constructAreaBlock)(const std::string&));
-
-    const DataGrid &getDataGrid() const;
 
     const Grid<AreaBlock> &getObjectGrid() const;
 

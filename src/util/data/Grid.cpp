@@ -15,33 +15,33 @@ int Grid::getHeight() const {
 }
 
 template <class T>
-void Grid::appendData(const T &data) {
+void Grid<T>::appendData(const T &data) {
     grid.push_back(data);
 }
 
 template <class T>
-void Grid::appendDataRV(T &&data) {
+void Grid<T>::appendDataRV(T &&data) {
     grid.emplace_back(std::move(data));
 }
 
 template <class T>
-const T& Grid::operator[] (int index) const {
+const T& Grid<T>::operator[] (int index) const {
     return grid[index];
 }
 
 template <class T>
-const T& Grid::operator[] (int index_i, int index_j) const {
-    int index = (index_i * width) + index_j;
+const T& Grid<T>::operator() (int index_x, int index_y) const {
+    int index = (index_y * width) + index_x;
     return grid[index];
 }
 
 template <class T>
-T& Grid::modify (int index) const {
+T& Grid<T>::modify (int index) const {
     return grid[index];
 }
 
 template <class T>
-T& Grid::modify (int index_i, int index_j) const {
-    int index = (index_i * width) + index_j;
+T& Grid<T>::modify (int index_x, int index_y) const {
+    int index = (index_y * width) + index_x;
     return grid[index];
 }

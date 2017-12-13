@@ -29,14 +29,14 @@ public:
     //returns const reference
     const T& operator[] (int index) const;
 
-    const T& operator[] (int index_i, int index_j) const;
+    const T& operator() (int index_x, int index_y) const;
 
     //returns modifiable reference
     T& modify (int index) const;
 
-    T& modify (int index_i, int index_j) const;
+    T& modify (int index_x, int index_y) const;
 
-    ;
+
 
 };
 

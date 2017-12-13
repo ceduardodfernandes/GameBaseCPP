@@ -2,8 +2,15 @@ cmake_minimum_required(VERSION 3.5)
 project(GameBaseCPP)
 
 set(CMAKE_CXX_STANDARD 11)
+set(BOOST_ROOT "/usr/local/lib/boost_1_65_1")
 
-include_directories(${PROJECT_SOURCE_DIR}/include)
+find_package(Boost 1.65.1)
+
+if(NOT Boost_FOUND)
+    message(FATAL_ERROR "Could not find boost!")
+endif()
+
+include_directories(${PROJECT_SOURCE_DIR}/include ${BOOST_ROOT})
 
 set(HEADER_FILES
         include/model/entity/test/Dog.h
@@ -12,8 +19,6 @@ set(HEADER_FILES
         include/model/entity/Block.h
         include/model/entity/GameObject.h
         include/util/data/Grid.h
-        include/util/data/DataGrid.h
-        include/util/data/ObjectGrid.h
         include/util/data/DataGridBuilder.h
         include/util/data/ObjectGridBuilder.h)
 
@@ -24,8 +29,6 @@ set(SOURCE_FILES
         src/model/entity/Block.cpp
         src/model/entity/GameObject.cpp
         src/util/data/Grid.cpp
-        src/util/data/DataGrid.cpp
-        src/util/data/ObjectGrid.cpp
         src/util/data/DataGridBuilder.cpp
         src/util/data/ObjectGridBuilder.cpp
         src/main.cpp

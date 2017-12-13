@@ -4,7 +4,7 @@
 
 #include "util/data/DataGridBuilder.h"
 
-DataGridBuilder::DataGridBuilder(std::string _fileName, int _dataGridWidth, int _dataGridHeight, char* _delimiter) :
+DataGridBuilder::DataGridBuilder(std::string _fileName, int _dataGridWidth, int _dataGridHeight, const char* _delimiter) :
         dataGrid(_dataGridWidth, _dataGridHeight), fileName(std::move(_fileName)), delimiter(_delimiter) { }
 
 char* DataGridBuilder::readFile() {
@@ -36,6 +36,10 @@ const std::string &DataGridBuilder::getFileName() const {
     return fileName;
 }
 
-const DataGrid &DataGridBuilder::getDataGrid() const {
+const char *DataGridBuilder::getDelimiter() const {
+    return delimiter;
+}
+
+const Grid<std::string> &DataGridBuilder::getDataGrid() const {
     return dataGrid;
 }
