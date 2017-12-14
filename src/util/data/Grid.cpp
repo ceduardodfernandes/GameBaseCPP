@@ -4,13 +4,16 @@
 
 #include "util/data/Grid.h"
 
-Grid::Grid (int _width, int _height) : width(_width), height(_height) {}
+template <class T>
+Grid<T>::Grid (int _width, int _height) : width(_width), height(_height) {}
 
-int Grid::getWidth() const {
+template <class T>
+int Grid<T>::getWidth() const {
     return width;
 }
 
-int Grid::getHeight() const {
+template <class T>
+int Grid<T>::getHeight() const {
     return height;
 }
 
@@ -45,3 +48,9 @@ T& Grid<T>::modify (int index_x, int index_y) const {
     int index = (index_y * width) + index_x;
     return grid[index];
 }
+
+/*
+void TempFunction() {
+    Grid<std::string> string_g(1,1);
+    Grid<AreaBlock> areablock_g(1,1);
+}*/

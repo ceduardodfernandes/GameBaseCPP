@@ -11,8 +11,7 @@ ObjectGridBuilder::ObjectGridBuilder(const Grid<std::string> *_dataGridPtr, int 
         playerPositionX(_playerPositionX),
         playerPositionY(_playerPositionY),
         constructAreaBlock(_constructAreaBlock),
-        objectGrid(2 * bufferWidth + 1, 2 * bufferHeight + 1) {}
-}
+        objectGrid(2 * _bufferWidth + 1, 2 * _bufferHeight + 1) {}
 
 void ObjectGridBuilder::build() {
     int dataX, dataY;
