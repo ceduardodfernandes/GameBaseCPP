@@ -40,6 +40,6 @@ const char *DataGridBuilder::getDelimiter() const {
     return delimiter;
 }
 
-const Grid<std::string> &DataGridBuilder::getDataGrid() const {
+const StringGrid<std::string> &DataGridBuilder::getDataGrid() const {
     return dataGrid;
 }

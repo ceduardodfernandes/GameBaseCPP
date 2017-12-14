@@ -18,9 +18,9 @@ set(HEADER_FILES
         include/model/entity/test/Person.h
         include/model/entity/Block.h
         include/model/entity/GameObject.h
-        include/util/data/Grid.h
+        include/util/data/StringGrid.h
         include/util/data/DataGridBuilder.h
-        include/util/data/ObjectGridBuilder.h)
+        include/util/data/ObjectGridBuilder.h src/util/data/GameObjectGrid.cpp include/util/data/GameObjectGrid.h)
 
 set(SOURCE_FILES
         src/model/entity/test/Dog.cpp
@@ -28,12 +28,12 @@ set(SOURCE_FILES
         src/model/entity/test/Person.cpp
         src/model/entity/Block.cpp
         src/model/entity/GameObject.cpp
-        src/util/data/Grid.cpp
+        src/util/data/StringGrid.cpp
         src/util/data/DataGridBuilder.cpp
         src/util/data/ObjectGridBuilder.cpp
         src/main.cpp
         src/tests/test_data_read.cpp
         src/tests/test_write_data_example.cpp
-        )
+        src/util/data/GameObjectGrid.cpp include/util/data/GameObjectGrid.h)
 
 add_executable(GameBaseCPP ${HEADER_FILES} ${SOURCE_FILES})

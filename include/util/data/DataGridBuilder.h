@@ -4,14 +4,14 @@
 #include <string>
 #include <fstream>
 #include <vector>
-#include "Grid.h"
+#include "StringGrid.h"
 
 
 class DataGridBuilder {
 private:
     std::string fileName;
     const char* delimiter;
-    Grid<std::string> dataGrid;
+    StringGrid dataGrid;
 
     char* readFile();
 
@@ -22,7 +22,7 @@ public:
 
     const char *getDelimiter() const;
 
-    const Grid<std::string> &getDataGrid() const;
+    const StringGrid &getDataGrid() const;
 
     void build();
 };

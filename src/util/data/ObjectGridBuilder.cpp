@@ -4,7 +4,7 @@
 
 #include "util/data/ObjectGridBuilder.h"
 
-ObjectGridBuilder::ObjectGridBuilder(const Grid<std::string> *_dataGridPtr, int _bufferWidth, int _bufferHeight, int _playerPositionX, int _playerPositionY, AreaBlock (*_constructAreaBlock)(const std::string &)) :
+ObjectGridBuilder::ObjectGridBuilder(const StringGrid *_dataGridPtr, int _bufferWidth, int _bufferHeight, int _playerPositionX, int _playerPositionY, AreaBlock (*_constructAreaBlock)(const std::string &)) :
         dataGridPtr(_dataGridPtr),
         bufferWidth(_bufferWidth),
         bufferHeight(_bufferHeight),
@@ -43,7 +43,7 @@ int ObjectGridBuilder::getPlayerPositionY() const {
     return playerPositionY;
 }
 
-const Grid<AreaBlock> &ObjectGridBuilder::getObjectGrid() const {
+const StringGrid<AreaBlock> &ObjectGridBuilder::getObjectGrid() const {
     return objectGrid;
 }
 

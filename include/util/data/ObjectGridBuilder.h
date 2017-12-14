@@ -4,14 +4,13 @@
 #include <memory>
 #include <vector>
 #include "model/entity/GameObject.h"
-#include "util/data/Grid.h"
-
-using AreaBlock = std::vector<std::unique_ptr<GameObject>>;
+#include "util/data/StringGrid.h"
+#include "GameObjectGrid.h"
 
 class ObjectGridBuilder {
 private:
-    const Grid<std::string>* dataGridPtr;
-    Grid<AreaBlock> objectGrid;
+    const StringGrid* dataGridPtr;
+    GameObjectGrid objectGrid;
     AreaBlock (*constructAreaBlock)(const std::string& blockData);
 
     int bufferWidth;
@@ -22,9 +21,9 @@ private:
 
 
 public:
-    ObjectGridBuilder(const Grid<std::string> *_dataGridPtr, int _bufferWidth, int _bufferHeight, int _playerPositionX, int _playerPositionY, AreaBlock (*_constructAreaBlock)(const std::string&));
+    ObjectGridBuilder(const StringGrid *_dataGridPtr, int _bufferWidth, int _bufferHeight, int _playerPositionX, int _playerPositionY, AreaBlock (*_constructAreaBlock)(const std::string&));
 
-    const Grid<AreaBlock> &getObjectGrid() const;
+    const GameObjectGrid &getObjectGrid() const;
 
     int getPlayerPositionX() const;
 

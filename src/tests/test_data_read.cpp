@@ -29,7 +29,7 @@ namespace test_data_read {
         const char* delimiter = std::string("|").c_str();
         DataGridBuilder dataGridBuilder("/Users/russelltemplet/Workstation/GameBaseCPP/resources/test/test_out.txt", 5, 5, delimiter);
         dataGridBuilder.build();
-        Grid<std::string> grid = dataGridBuilder.getDataGrid();
+        StringGrid<std::string> grid = dataGridBuilder.getDataGrid();
 
         ObjectGridBuilder objectGridBuilder(&grid, 3, 3, 0, 0, constructAreaBlock);
         objectGridBuilder.build();
