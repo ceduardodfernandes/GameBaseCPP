@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 #include "tests/test_data_read.h"
 #include "tests/test_write_data_example.h"
 
@@ -13,6 +14,7 @@
 
 int main(int argc, char** argv) {
 
+
     if (argc == 1) {
 
         // run game normally
@@ -20,17 +22,17 @@ int main(int argc, char** argv) {
         return 0;
 
     } else if (argc == 2) {
-        if (std::strcmp(argv[1], "-e") == 0) {
+        if (strcmp(argv[1], "-e") == 0) {
 
             // run editor
             std::cout << "Editor time\n";
 
-        } else if (std::strcmp(argv[1], "-1") == 0) {
+        } else if (strcmp(argv[1], "-1") == 0) {
 
             // run test_write_data_example.cpp
             return test_data_read::run();
 
-        } else if (std::strcmp(argv[1], "-2") == 0) {
+        } else if (strcmp(argv[1], "-2") == 0) {
 
             // run test_data_read.cpp
             return test_write_data_example::run();

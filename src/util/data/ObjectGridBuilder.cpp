@@ -25,7 +25,8 @@ void ObjectGridBuilder::build() {
             for (int j = -1 * bufferWidth; j <= bufferWidth; j++) {
                 dataX = playerPositionX + j;
                 if (dataX >= 0 && dataX < dataGridWidth) {
-                    objectGrid.modify(j + bufferWidth, i + bufferHeight) = constructAreaBlock((*dataGridPtr)(dataX, dataY));
+                    objectGrid.modifiableAt(j + bufferWidth, i + bufferHeight) = constructAreaBlock(
+                            dataGridPtr->constAt(dataX, dataY));
                 }
             }
         }

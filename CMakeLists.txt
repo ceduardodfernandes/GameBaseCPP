@@ -18,7 +18,7 @@ set(HEADER_FILES
         include/model/entity/test/Person.h
         include/model/entity/Block.h
         include/model/entity/GameObject.h
-        include/util/data/Grid.h
+        include/util/data/Grid.tpp
         include/util/data/DataGridBuilder.h
         include/util/data/ObjectGridBuilder.h)
 
@@ -28,7 +28,6 @@ set(SOURCE_FILES
         src/model/entity/test/Person.cpp
         src/model/entity/Block.cpp
         src/model/entity/GameObject.cpp
-        src/util/data/Grid.cpp
         src/util/data/DataGridBuilder.cpp
         src/util/data/ObjectGridBuilder.cpp
         src/main.cpp

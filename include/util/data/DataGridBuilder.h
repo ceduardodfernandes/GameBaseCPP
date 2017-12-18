@@ -4,7 +4,7 @@
 #include <string>
 #include <fstream>
 #include <vector>
-#include "Grid.h"
+#include "Grid.tpp"
 
 
 class DataGridBuilder {

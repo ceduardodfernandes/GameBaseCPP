@@ -3,8 +3,9 @@
 
 #include <memory>
 #include <vector>
+#include <string>
 #include "model/entity/GameObject.h"
-#include "util/data/Grid.h"
+#include "util/data/Grid.tpp"
 
 using AreaBlock = std::vector<std::unique_ptr<GameObject>>;
 
