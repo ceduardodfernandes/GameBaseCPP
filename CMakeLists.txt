@@ -20,7 +20,10 @@ set(HEADER_FILES
         include/model/entity/GameObject.h
         include/util/data/Grid.tpp
         include/util/data/DataGridBuilder.h
-        include/util/data/ObjectGridBuilder.h)
+        include/util/data/ObjectGridBuilder.h
+        include/tests/test_data_read.h
+        include/tests/test_write_data_example.h
+        )
 
 set(SOURCE_FILES
         src/model/entity/test/Dog.cpp

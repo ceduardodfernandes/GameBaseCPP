@@ -10,7 +10,7 @@ DataGridBuilder::DataGridBuilder(std::string _fileName, int _dataGridWidth, int 
 char* DataGridBuilder::readFile() {
     char* memBlock = nullptr;
     std::ifstream reader(fileName, std::ios::in|std::ios::binary|std::ios::ate);
-    if (reader.is_open()) {
+    if (reader.is_open()) { //TODO: figure out when ifstream isnt reading file...
         long size = reader.tellg();
         memBlock = new char[size];
 
