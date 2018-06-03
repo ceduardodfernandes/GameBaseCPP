@@ -27,7 +27,7 @@ namespace test_data_read {
         std::cout << "Used test data read version!\n";
 
         const char* delimiter = std::string("|").c_str();
-        DataGridBuilder dataGridBuilder("/Users/russelltemplet/Workstation/GameBaseCPP/resources/test/test_out.txt", 5, 5, delimiter);
+        DataGridBuilder dataGridBuilder("test_out.txt", 5, 5, delimiter);
         dataGridBuilder.build();
         Grid<std::string> grid = dataGridBuilder.getDataGrid();
 
