@@ -1,0 +1,30 @@
+Entity data format
+
+use a template class (std::array) to generate an array of some type you pass in
+the type must should ideally be some sort of numeric type, but I guess the dev can do whatever they want
+
+Data loaded from an entity file is NOT converted into objects immediately -- what if the file contains extremely large amounts of entities?
+Instead it is read directly into an array of some type (matching the type of data stored in the file itself)
+Entities are constructed and a pointer is added to the entity object array.
+The entity object array has a much smaller capacity than the entity data array. However, in many games, they will be exactly the same size
+
+In games where there are no loading screens and everything is open, the entity data array will comprise a large portion (if not all) of that single open area
+Optionally, the
+
+*** WHY
+
+
+--Converting data to object (Entity)
+Read data as a (pref int or long)
+
+Split long value with this formula:
+value = (data / (int)pow(10, length - endIndex)) % (int)pow(10, endIndex - startIndex);
+where
+	data is the long value in the array
+	length is the given length (in digits) of the data (this will differ based on the Entity subtype)
+	startIndex is the starting index of the particular value
+	endIndex is the ending index of the particular value
+
+How will you know the length of the data, based on Entity type, if you don't know the Entity type?
+in Game props, there will be a field for id length, which will determine how many digits are dedicated to id and entity type id
+once we know the Entity type id -- we can get the type and use this the look up the remaining info
