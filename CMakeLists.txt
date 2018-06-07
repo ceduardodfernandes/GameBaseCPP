@@ -10,7 +10,7 @@ set(HEADER_FILES
         include/model/entity/test/Milk.h
         include/model/entity/test/Person.h
         include/model/entity/Block.h
-        include/model/entity/GameObject.h
+        include/model/entity/Entity.h
         include/util/data/Grid.tpp
         include/util/data/DataGridBuilder.h
         include/util/data/ObjectGridBuilder.h)
@@ -20,7 +20,7 @@ set(SOURCE_FILES
         src/model/entity/test/Milk.cpp
         src/model/entity/test/Person.cpp
         src/model/entity/Block.cpp
-        src/model/entity/GameObject.cpp
+        src/model/entity/Entity.cpp
         src/util/data/DataGridBuilder.cpp
         src/util/data/ObjectGridBuilder.cpp
         src/main.cpp

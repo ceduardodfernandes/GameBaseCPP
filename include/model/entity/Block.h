@@ -2,7 +2,6 @@
 #define BLOCK_H
 
 #include "model/entity/GameObject.h"
-#include <EASTL/vector.h>
 
 class Block : public GameObject {
 public:
