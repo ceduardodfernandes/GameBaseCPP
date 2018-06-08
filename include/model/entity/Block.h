@@ -1,9 +1,9 @@
 #ifndef BLOCK_H
 #define BLOCK_H
 
-#include "model/entity/GameObject.h"
+#include "model/entity/Entity.h"
 
-class Block : public GameObject {
+class Block : public Entity {
 public:
     Block(int _instanceId, int _x, int _y);
     void update();

@@ -4,10 +4,10 @@
 #include <memory>
 #include <vector>
 #include <string>
-#include "model/entity/GameObject.h"
+#include "model/entity/Entity.h"
 #include "util/data/Grid.tpp"
 
-using AreaBlock = std::vector<std::unique_ptr<GameObject>>;
+using AreaBlock = std::vector<std::unique_ptr<Entity>>;
 
 class ObjectGridBuilder {
 private:

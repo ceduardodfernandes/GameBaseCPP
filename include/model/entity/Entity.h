@@ -1,12 +1,12 @@
-#ifndef GAMEOBJECT_H
-#define GAMEOBJECT_H
+#ifndef ENTITY_H
+#define ENTITY_H
 
-class GameObject {
+class Entity {
 protected:
     int instanceId, classId, x, y;
     bool solid;
 public:
-    GameObject(int _instanceId, int _classId, int _x, int _y, bool _solid);
+    Entity(int _instanceId, int _classId, int _x, int _y, bool _solid);
 
     int getInstanceId() const {
         return instanceId;
@@ -31,4 +31,4 @@ public:
     virtual void update() =0;
 };
 
-#endif /* GAMEOBJECT_H */
+#endif /* ENTITY_H */

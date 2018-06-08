@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
-#include "tests/test_data_read.h"
-#include "tests/test_write_data_example.h"
+// #include "tests/test_data_read.h"
+// #include "tests/test_write_data_example.h"
 
 /**
  * This main file is the main controller of the engine -- decides whether to run game, editor, or any custom tests.
@@ -30,12 +30,12 @@ int main(int argc, char** argv) {
         } else if (strcmp(argv[1], "-1") == 0) {
 
             // run test_write_data_example.cpp
-            return test_data_read::run();
+            // return test_data_read::run();
 
         } else if (strcmp(argv[1], "-2") == 0) {
 
             // run test_data_read.cpp
-            return test_write_data_example::run();
+            // return test_write_data_example::run();
 
         }
     } else {

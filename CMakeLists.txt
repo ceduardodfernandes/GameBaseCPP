@@ -24,8 +24,6 @@ set(SOURCE_FILES
         src/util/data/DataGridBuilder.cpp
         src/util/data/ObjectGridBuilder.cpp
         src/main.cpp
-        src/tests/test_data_read.cpp
-        src/tests/test_write_data_example.cpp
         )
 
 add_executable(GameBaseCPP ${HEADER_FILES} ${SOURCE_FILES})

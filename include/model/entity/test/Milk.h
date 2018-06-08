@@ -3,7 +3,7 @@
 
 #include "model/entity/Entity.h"
 
-class Milk : public GameObject {
+class Milk : public Entity {
 private:
     int expiryDate, type;
 

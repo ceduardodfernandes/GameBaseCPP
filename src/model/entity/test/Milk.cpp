@@ -5,7 +5,7 @@
 #include "model/entity/test/Milk.h"
 
 Milk::Milk(int _instanceId, int _x, int _y, int _expiryDate, int _type) :
-        GameObject(_instanceId, 2, _x, _y, false), expiryDate(_expiryDate), type(_type) {}
+        Entity(_instanceId, 2, _x, _y, false), expiryDate(_expiryDate), type(_type) {}
 
 int Milk::getExpiryDate() const {
     return expiryDate;

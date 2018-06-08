@@ -2,9 +2,9 @@
 #define DOG_H
 
 #include <string>
-#include "model/entity/GameObject.h"
+#include "model/entity/Entity.h"
 
-class Dog : public GameObject {
+class Dog : public Entity {
 private:
     std::string name;
     int dogYears;

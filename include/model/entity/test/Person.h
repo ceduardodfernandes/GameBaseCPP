@@ -1,10 +1,10 @@
 #ifndef PERSON_H
 #define PERSON_H
 
-#include "model/entity/GameObject.h"
+#include "model/entity/Entity.h"
 #include <string>
 
-class Person : public GameObject {
+class Person : public Entity {
 private:
     int age, address;
 
