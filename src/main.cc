@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cstring>
+#include <SDL.h>
+
 // #include "tests/test_data_read.h"
 // #include "tests/test_write_data_example.h"
 
@@ -13,8 +15,7 @@
  */
 
 int main(int argc, char** argv) {
-
-
+      
     if (argc == 1) {
 
         // run game normally
@@ -37,10 +38,12 @@ int main(int argc, char** argv) {
             // run test_data_read.cpp
             // return test_write_data_example::run();
 
+        } else if (strcmp(argv[1], "-s") == 0) {
+
         }
     } else {
         std::cout << "Only 0 or 1 argument is valid.\nPossible arguments:\n`-e` : Editor Mode\n`-1` : TEST - Write arbitrary sample data\n`-2` : TEST - Read sample output file\n";
     }
 
-    return 1;
+    return 0;
 }

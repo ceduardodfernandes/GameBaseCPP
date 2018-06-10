@@ -3,7 +3,16 @@ project(GameBaseCPP)
 
 set(CMAKE_CXX_STANDARD 11)
 
-include_directories(${CMAKE_SOURCE_DIR}/include ${CMAKE_SOURCE_DIR}/lib/include)
+#get_cmake_property(_variableNames VARIABLES)
+#list(SORT _variableNames)
+#foreach(_variableName ${_variableNames})
+#        message(STATUS "${_variableName}=${${_variableName}}")
+#endforeach()
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SYSTEM_PREFIX_PATH}/FindSDL2.cmake")
+
+find_package(SDL2 REQUIRED)
+include_directories(${CMAKE_SOURCE_DIR}/include ${CMAKE_SOURCE_DIR}/lib/include ${SDL2_INCLUDE_DIR})
 
 set(HEADER_FILES
         include/model/entity/test/Dog.h
@@ -16,15 +25,15 @@ set(HEADER_FILES
         include/util/data/ObjectGridBuilder.h)
 
 set(SOURCE_FILES
-        src/model/entity/test/Dog.cpp
-        src/model/entity/test/Milk.cpp
-        src/model/entity/test/Person.cpp
-        src/model/entity/Block.cpp
-        src/model/entity/Entity.cpp
-        src/util/data/DataGridBuilder.cpp
-        src/util/data/ObjectGridBuilder.cpp
-        src/main.cpp
+        src/model/entity/test/Dog.cc
+        src/model/entity/test/Milk.cc
+        src/model/entity/test/Person.cc
+        src/model/entity/Block.cc
+        src/model/entity/Entity.cc
+        src/util/data/DataGridBuilder.cc
+        src/util/data/ObjectGridBuilder.cc
+        src/main.cc
         )
 
 add_executable(GameBaseCPP ${HEADER_FILES} ${SOURCE_FILES})
-target_link_libraries(GameBaseCPP ${CMAKE_SOURCE_DIR}/lib/libEASTL.a)
+target_link_libraries(GameBaseCPP ${CMAKE_SOURCE_DIR}/lib/libEASTL.a ${SDL2_LIBRARY})
