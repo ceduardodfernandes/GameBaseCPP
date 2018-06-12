@@ -1,6 +1,8 @@
-#include <SDL.h>
+#include "tests/sdl_test.h"
 
-void TestSDL() {
+namespace esotericenginetest {
+
+int TestSdl() {
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         std::cout << "There was an error" << std::endl;
     } else {
@@ -15,6 +17,8 @@ void TestSDL() {
         500,
         SDL_WINDOW_RESIZABLE
     );
+
+    SDL_SetWindowMinimumSize(window, 500, 500);
 
     if (window == NULL) {
         std::cout << "window could not be created: " << SDL_GetError() << std::endl;
@@ -36,4 +40,8 @@ void TestSDL() {
     }
     SDL_DestroyWindow(window);
     SDL_Quit();
+
+    return 0;
+}
+
 }

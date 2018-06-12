@@ -1,9 +1,9 @@
 #include <iostream>
 #include <cstring>
-#include <SDL.h>
 
 // #include "tests/test_data_read.h"
 // #include "tests/test_write_data_example.h"
+#include "tests/sdl_test.h"
 
 /**
  * This main file is the main controller of the engine -- decides whether to run game, editor, or any custom tests.
@@ -39,6 +39,7 @@ int main(int argc, char** argv) {
             // return test_write_data_example::run();
 
         } else if (strcmp(argv[1], "-s") == 0) {
+            return esotericenginetest::TestSdl();
 
         }
     } else {
