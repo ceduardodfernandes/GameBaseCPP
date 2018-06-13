@@ -5,7 +5,9 @@
 #include <vector>
 #include <string>
 #include "model/entity/Entity.h"
-#include "util/data/Grid.tpp"
+#include "util/data/Grid.h"
+
+namespace esotericengine {
 
 using AreaBlock = std::vector<std::unique_ptr<Entity>>;
 
@@ -34,5 +36,7 @@ public:
 
     void build();
 };
+
+}
 
 #endif /* ESO_ENGINE_UTIL_OBJECTGRIDBUILDER_H_ */

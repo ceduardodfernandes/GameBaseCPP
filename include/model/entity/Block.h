@@ -8,7 +8,7 @@ namespace esotericengine {
 class Block : public Entity {
 public:
     Block(int instanceId, int x, int y);
-    void update();
+    void Update();
 };
 
 }

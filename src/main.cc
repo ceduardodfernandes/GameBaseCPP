@@ -4,6 +4,7 @@
 // #include "tests/test_data_read.h"
 // #include "tests/test_write_data_example.h"
 #include "tests/sdl_test.h"
+#include "tests/input_test.h"
 
 /**
  * This main file is the main controller of the engine -- decides whether to run game, editor, or any custom tests.
@@ -41,6 +42,8 @@ int main(int argc, char** argv) {
         } else if (strcmp(argv[1], "-s") == 0) {
             return esotericenginetest::TestSdl();
 
+        } else if (strcmp(argv[1], "-i") == 0) {
+            return esotericenginetest::TestInputModel();
         }
     } else {
         std::cout << "Only 0 or 1 argument is valid.\nPossible arguments:\n`-e` : Editor Mode\n`-1` : TEST - Write arbitrary sample data\n`-2` : TEST - Read sample output file\n";

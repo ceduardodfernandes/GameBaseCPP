@@ -4,7 +4,7 @@
 #include <string>
 #include <fstream>
 #include <vector>
-#include "Grid.tpp"
+#include "Grid.h"
 
 namespace esotericengine {
 

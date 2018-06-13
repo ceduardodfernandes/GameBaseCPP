@@ -26,8 +26,6 @@ int TestSdl() {
 
     SDL_Rect rect = {0, 0, 1920, 1080};
 
-    SDL_
-
     if (window == NULL) {
         std::cout << "window could not be created: " << SDL_GetError() << std::endl;
         return 1;
