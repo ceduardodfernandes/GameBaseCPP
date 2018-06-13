@@ -4,6 +4,8 @@
 
 #include "util/data/DataGridBuilder.h"
 
+namespace esotericengine {
+
 DataGridBuilder::DataGridBuilder(std::string _fileName, int _dataGridWidth, int _dataGridHeight, const char* _delimiter) :
         dataGrid(_dataGridWidth, _dataGridHeight), fileName(std::move(_fileName)), delimiter(_delimiter) { }
 
@@ -42,4 +44,6 @@ const char *DataGridBuilder::getDelimiter() const {
 
 const Grid<std::string> &DataGridBuilder::getDataGrid() const {
     return dataGrid;
+}
+
 }

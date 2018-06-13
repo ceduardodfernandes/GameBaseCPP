@@ -4,6 +4,8 @@
 
 #include "util/data/ObjectGridBuilder.h"
 
+namespace esotericengine {
+
 ObjectGridBuilder::ObjectGridBuilder(const Grid<std::string> *_dataGridPtr, int _bufferWidth, int _bufferHeight, int _playerPositionX, int _playerPositionY, AreaBlock (*_constructAreaBlock)(const std::string &)) :
         dataGridPtr(_dataGridPtr),
         bufferWidth(_bufferWidth),
@@ -47,4 +49,4 @@ const Grid<AreaBlock> &ObjectGridBuilder::getObjectGrid() const {
     return objectGrid;
 }
 
-
+}

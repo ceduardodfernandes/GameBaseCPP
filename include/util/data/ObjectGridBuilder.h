@@ -1,5 +1,5 @@
-#ifndef OBJECTGRIDBUILDER_H
-#define OBJECTGRIDBUILDER_H
+#ifndef ESO_ENGINE_UTIL_OBJECTGRIDBUILDER_H_
+#define ESO_ENGINE_UTIL_OBJECTGRIDBUILDER_H_
 
 #include <memory>
 #include <vector>
@@ -9,6 +9,7 @@
 
 using AreaBlock = std::vector<std::unique_ptr<Entity>>;
 
+//TODO: perhaps convert this from a class to a function
 class ObjectGridBuilder {
 private:
     const Grid<std::string>* dataGridPtr;
@@ -34,4 +35,4 @@ public:
     void build();
 };
 
-#endif /* OBJECTGRIDBUILDER_H */
+#endif /* ESO_ENGINE_UTIL_OBJECTGRIDBUILDER_H_ */

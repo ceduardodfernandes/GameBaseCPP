@@ -2,10 +2,12 @@
 // Created by Russell Templet on 12/11/17.
 //
 
-#ifndef GAMEBASECPP_GRID_TPP
-#define GAMEBASECPP_GRID_TPP
+#ifndef ESO_ENGINE_UTIL_GRID_H_
+#define ESO_ENGINE_UTIL_GRID_H_
 
 #include <vector>
+
+namespace esotericengine {
 
 template <class T>
 class Grid {
@@ -83,5 +85,7 @@ T& Grid<T>::modifiableAt(int index_x, int index_y) {
     return grid[index];
 }
 
+}
 
-#endif //GAMEBASECPP_GRID_TPP
+
+#endif //ESO_ENGINE_UTIL_GRID_H_

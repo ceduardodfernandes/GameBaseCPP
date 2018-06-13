@@ -4,5 +4,9 @@
 
 #include "model/entity/Entity.h"
 
-Entity::Entity(int _instanceId, int _classId, int _x, int _y, bool _solid) :
-        instanceId(_instanceId), classId(_classId), x(_x), y(_y), solid(_solid) {}
+namespace esotericengine {
+
+Entity::Entity(int instance_id, int class_id, int x, int y, bool solid) :
+        instance_id_(instance_id), class_id_(class_id), x_(x), y_(y), solid_(solid) {}
+
+}

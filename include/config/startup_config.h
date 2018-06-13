@@ -4,4 +4,3 @@ struct DataProps {
     unsigned int num_entity_type_digits;
     unsigned int num_location_digits;
 };
-

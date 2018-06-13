@@ -1,12 +1,16 @@
-#ifndef BLOCK_H
-#define BLOCK_H
+#ifndef ESO_ENGINE_MODEL_BLOCK_H_
+#define ESO_ENGINE_MODEL_BLOCK_H_
 
 #include "model/entity/Entity.h"
 
+namespace esotericengine {
+
 class Block : public Entity {
 public:
-    Block(int _instanceId, int _x, int _y);
+    Block(int instanceId, int x, int y);
     void update();
 };
 
-#endif /* BLOCK_H */
+}
+
+#endif /* ESO_ENGINE_MODEL_BLOCK_H_ */

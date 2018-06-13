@@ -1,12 +1,14 @@
-#ifndef DATAGRIDBUILDER_H
-#define DATAGRIDBUILDER_H
+#ifndef ESO_ENGINE_UTIL_DATAGRIDBUILDER_H_
+#define ESO_ENGINE_UTIL_DATAGRIDBUILDER_H_
 
 #include <string>
 #include <fstream>
 #include <vector>
 #include "Grid.tpp"
 
+namespace esotericengine {
 
+//TODO: This could perhaps be converted into a method instead of a class 
 class DataGridBuilder {
 private:
     std::string fileName;
@@ -27,4 +29,6 @@ public:
     void build();
 };
 
-#endif /* DATAGRIDBUILDER_H */
+}
+
+#endif /* ESO_ENGINE_UTIL_DATAGRIDBUILDER_H_ */

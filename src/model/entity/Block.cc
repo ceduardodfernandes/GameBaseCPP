@@ -4,7 +4,11 @@
 
 #include "model/entity/Block.h"
 
-Block::Block(int _instanceId, int _x, int _y) :
-        Entity(_instanceId, 5, _x, _y, true) {}
+namespace esotericengine {
 
-void Block::update() {}
+Block::Block(int instance_id, int x, int y) :
+        Entity(instance_id, 5, x, y, true) {}
+
+void Block::Update() {}
+
+}
