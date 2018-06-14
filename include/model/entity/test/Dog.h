@@ -2,7 +2,7 @@
 #define DOG_H
 
 #include <string>
-#include "model/entity/Entity.h"
+#include "model/entity/entity.h"
 
 class Dog : public Entity {
 private:

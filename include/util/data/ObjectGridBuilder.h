@@ -4,7 +4,7 @@
 #include <memory>
 #include <vector>
 #include <string>
-#include "model/entity/Entity.h"
+#include "model/entity/entity.h"
 #include "util/data/Grid.h"
 
 namespace esotericengine {

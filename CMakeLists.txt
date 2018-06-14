@@ -23,9 +23,9 @@ set(HEADER_FILES
         # include/model/entity/test/Dog.h
         # include/model/entity/test/Milk.h
         # include/model/entity/test/Person.h
-        include/model/entity/Block.h
-        include/model/entity/Entity.h
-        include/util/data/Grid.h
+        include/model/entity/block.h
+        include/model/entity/entity.h
+        include/util/data/grid.h
         include/util/data/DataGridBuilder.h
         include/util/data/ObjectGridBuilder.h
         include/tests/sdl_test.h
@@ -36,8 +36,8 @@ set(SOURCE_FILES
         # src/model/entity/test/Dog.cc
         # src/model/entity/test/Milk.cc
         # src/model/entity/test/Person.cc
-        src/model/entity/Block.cc
-        src/model/entity/Entity.cc
+        src/model/entity/block.cc
+        src/model/entity/entity.cc
         src/util/data/DataGridBuilder.cc
         src/util/data/ObjectGridBuilder.cc
         src/main.cc

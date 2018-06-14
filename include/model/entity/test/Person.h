@@ -1,7 +1,7 @@
 #ifndef PERSON_H
 #define PERSON_H
 
-#include "model/entity/Entity.h"
+#include "model/entity/entity.h"
 #include <string>
 
 class Person : public Entity {

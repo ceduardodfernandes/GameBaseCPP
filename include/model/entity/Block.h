@@ -1,7 +1,7 @@
 #ifndef ESO_ENGINE_MODEL_BLOCK_H_
 #define ESO_ENGINE_MODEL_BLOCK_H_
 
-#include "model/entity/Entity.h"
+#include "model/entity/entity.h"
 
 namespace esotericengine {
 

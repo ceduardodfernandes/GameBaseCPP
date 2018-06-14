@@ -2,7 +2,7 @@
 // Created by Russell Templet on 11/19/17.
 //
 
-#include "model/entity/Block.h"
+#include "model/entity/block.h"
 
 namespace esotericengine {
 

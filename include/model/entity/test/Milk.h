@@ -1,7 +1,7 @@
 #ifndef MILK_H
 #define MILK_H
 
-#include "model/entity/Entity.h"
+#include "model/entity/entity.h"
 
 class Milk : public Entity {
 private:

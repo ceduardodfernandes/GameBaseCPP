@@ -33,10 +33,8 @@ int TestSdl() {
     
     SDL_Event e;
     bool quit = false;
-    long counter = 0;
-    while (!quit){
-        std::cout << "rendering" << counter++ << std::endl;
 
+    while (!quit){
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderClear(renderer);
 
@@ -45,8 +43,6 @@ int TestSdl() {
         
         // SDL_SetRenderDrawColor(renderer, 0, 255, 255, 255);
         // SDL_RenderDrawRect(renderer, &rect);
-
-
 
         SDL_RenderPresent(renderer);
 

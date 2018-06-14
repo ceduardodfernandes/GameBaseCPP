@@ -1,6 +1,10 @@
 #ifndef ESO_ENGINE_MODEL_INPUTMODEL_H_
 #define ESO_ENGINE_MODEL_INPUTMODEL_H_
 
+#include <SDL2/SDL.h>
+
+#include "config/startup.h"
+
 namespace esotericengine {
 
 namespace input {
@@ -40,6 +44,8 @@ struct InputModel {
 
 
     int state;
+
+    void Update(SDL_Keycode keycode);
 };
 
 }
