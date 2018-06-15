@@ -6,6 +6,7 @@
 namespace esotericenginetest {
 
 int TestInputModel();
+int TestUniqueInputs();
 
 }
 

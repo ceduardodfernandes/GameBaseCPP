@@ -2,10 +2,10 @@
 
 namespace esotericengine {
 
-void InputModel::Update(SDL_Keycode keycode) {
-    // switch (keycode) {
-
-    // }
+void InputModel::Update(const SDL_Keycode& keycode) {
+    switch (keycode) {
+        case 
+    }
 }
 
 }

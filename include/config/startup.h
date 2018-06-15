@@ -12,37 +12,14 @@ struct DataProps {
     unsigned int num_location_digits;
 };
 
+/**
+ * InputMapping is currently just an array of SDL_Keycodes
+ * By using the input model constants, we can figure out the index of the array, based on these settings
+ * Value of this array is a SDL_Keycode, 
+ * 
+ */
 struct InputMapping {
-    SDL_Keycode face_up;   
-    SDL_Keycode face_right;   
-    SDL_Keycode face_bottom;  
-    SDL_Keycode face_left;   
-
-    SDL_Keycode direction_up;
-    SDL_Keycode direction_right;
-    SDL_Keycode direction_down;
-    SDL_Keycode direction_left;
-
-    SDL_Keycode shoulder_right;
-    SDL_Keycode shoulder_left;
-
-    SDL_Keycode trigger_right;
-    SDL_Keycode trigger_left; 
-
-    SDL_Keycode thrust_right; 
-    SDL_Keycode thrust_left;  
-
-    SDL_Keycode front_right;
-    SDL_Keycode front_left;
-
-    SDL_Keycode aux_1;
-    SDL_Keycode aux_2;
-    SDL_Keycode aux_3;
-    SDL_Keycode aux_4;
-    SDL_Keycode aux_5;
-    SDL_Keycode aux_6;
-    SDL_Keycode aux_7;
-    SDL_Keycode aux_8;
+    SDL_Keycode input_map_array[32];
 };
 
 }

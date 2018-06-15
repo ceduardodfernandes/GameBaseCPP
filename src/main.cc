@@ -43,7 +43,7 @@ int main(int argc, char** argv) {
             return esotericenginetest::TestSdl();
 
         } else if (strcmp(argv[1], "-i") == 0) {
-            return esotericenginetest::TestInputModel();
+            return esotericenginetest::TestUniqueInputs();
         }
     } else {
         std::cout << "Only 0 or 1 argument is valid.\nPossible arguments:\n`-e` : Editor Mode\n`-1` : TEST - Write arbitrary sample data\n`-2` : TEST - Read sample output file\n";
